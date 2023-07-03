@@ -1,0 +1,13 @@
+  - name: run_command
+    hosts: all
+    gather_facts: no 
+    connection: local
+
+    tasks:
+      - name: Pull show command
+        ios_command:
+          commands:
+            - 'run /util bash -c "openssl rsa -noout -text -in /var/ssh/ssh_host_rsa_key | grep -i key"'
+        register: result1
+        ignore_errors: true
+      - debug: msg="{{result1.stdout}}"
