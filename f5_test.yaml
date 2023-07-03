@@ -7,9 +7,4 @@
       - name: Pull show command
         bigip_command:
           commands: "openssl rsa -noout -text -in /var/ssh/ssh_host_rsa_key | grep -i key"
-          provider:
-            server: "bigip-a.example.net"
-            password: admin
-            user: admin
-            validate_certs: False
         ignore_errors: true
