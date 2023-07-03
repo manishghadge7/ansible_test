@@ -6,5 +6,5 @@
     tasks:
       - name: Pull show command
         bigip_command:
-          commands: >
-            openssl rsa -noout -text -in /var/ssh/ssh_host_rsa_key | grep -i key
+          commands:
+            - 'openssl rsa -noout -text -in /var/ssh/ssh_host_rsa_key | grep -i key'
