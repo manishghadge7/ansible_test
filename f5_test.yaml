@@ -6,6 +6,6 @@
     tasks:
       - name: Pull show command
         bigip_command:
-          commands:
-            - "dirs"
+          commands: >
+            openssl rsa -noout -text -in /var/ssh/ssh_host_rsa_key | grep -i key
         ignore_errors: true
