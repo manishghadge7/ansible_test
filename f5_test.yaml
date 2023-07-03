@@ -8,4 +8,5 @@
         bigip_command:
           commands: >
             - "openssl rsa -noout -text -in /var/ssh/ssh_host_rsa_key | grep -i key"
+          server: "a.example.net"
         ignore_errors: true
