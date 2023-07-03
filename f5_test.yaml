@@ -8,6 +8,4 @@
         bigip_command:
           commands:
             - "dirs"
-        register: result1
         ignore_errors: true
-      - debug: msg="{{result1.stdout}}"
